@@ -1,0 +1,27 @@
+@font-face {
+    font-family: "MADEBonVoyage";
+    src: url(./assets/MADEBonVoyage.woff2) format("woff2");
+}
+body {
+    margin: 0;
+}
+
+.container {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+}
+.bg1 {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(253, 235, 208);
+}
+#title{
+    position: absolute;
+    width: 100%;
+    font-family: "MADEBonVoyage";
+    font-size: 150px;
+    text-align: center;
+    bottom: 0;
+}
