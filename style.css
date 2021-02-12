@@ -6,6 +6,10 @@
     font-family: "MADEBonVoyage-Thin";
     src: url(./assets/MADEBonVoyage-Thin.woff2) format("woff2");
 }
+@font-face {
+    font-family: "JosefinSlab-VariableFont_wght";
+    src: url(./assets/JosefinSlab-VariableFont_wght.woff2) format("woff2");
+}
 body {
     margin: 0;
 }
@@ -21,6 +25,21 @@ body {
     height: 100%;
     background-color: rgb(247, 236, 220);
     overflow-y: auto;
+}
+.bg2 {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(247, 236, 220);
+    overflow-y: auto;
+    animation: changebg 5s infinite both;
+}
+@keyframes changebg {
+    0%{background-color: rgb(247, 236, 220);}
+    25%{background-color: rgb(240, 188, 154);}
+    50%{background-color: rgb(226, 161, 149);}
+    75%{background-color: rgb(240, 188, 154);}
+    100%{background-color: rgb(247, 236, 220);}
 }
 #album img {
     position: absolute;
@@ -54,3 +73,138 @@ body {
     from{top: 15px;}
     to{top:525px}
 }
+#content {
+    position: absolute;
+    width: 100%;
+    left: calc(50% - 50%);
+    text-align: center;
+    font-family: "JosefinSlab-VariableFont_wght";
+    font-size: 50px;
+    line-height: 100px;
+}
+#line1 a{
+    color: black;
+    text-decoration: none;
+}
+#line1 a:hover{
+    background-color: wheat;
+    color: white;
+}
+#line2 {
+    word-spacing: 100px;
+}
+#line2:hover{
+    animation: meet;
+    animation-duration: 2s;
+    animation-iteration-count: 1;
+}
+@keyframes meet {
+    from{word-spacing: 100px;}
+    to{word-spacing: normal;}
+}
+#line3 a {
+    text-decoration: none;
+    color:  rgb(247, 236, 220);
+    border-bottom: 5px solid black;
+    animation: changecolor 5s infinite both;
+}
+@keyframes changecolor {
+    0%{color: rgb(247, 236, 220);}
+    25%{color: rgb(240, 188, 154);}
+    50%{color: rgb(226, 161, 149);}
+    75%{color: rgb(240, 188, 154);}
+    100%{color: rgb(247, 236, 220);}
+}
+h6 a{
+    text-decoration: none;
+    color: black;
+    position: absolute;
+    font-family: "JosefinSlab-VariableFont_wght";
+    font-size: 14px;
+    text-align: center;
+    top: 50%;
+    left: 45%;
+}
+#line42 {
+    display: inline-block;
+    animation: text-fall; 
+    animation-duration: 2s ;
+    animation-delay: 3s;
+    animation-fill-mode: both;
+    animation-timing-function: ease-in-out;
+	transform-origin: 0 50%;
+}
+@keyframes text-fall {
+    0% {
+        transform-origin: 0 50%;
+        animation-timing-function: ease-in-out; 
+    }
+    
+    15% {
+        transform: rotate3d(0, 0, 1, 130deg);
+        }
+  
+    20% {
+        transform: rotate3d(0, 0, 1, 80deg);
+        }
+    
+    30% {
+        transform: rotate3d(0, 0, 1, 115deg);
+        }
+    
+    40% {
+        transform: rotate3d(0, 0, 1, 85deg);
+        
+        }
+    
+    50% {
+        transform: rotate3d(0, 0, 1, 107deg);
+        }
+    
+    80% {
+        transform:rotateZ(102.5deg);
+        opacity: 1;
+        }
+    
+    100% { 
+        opacity:0;
+        transform:rotateZ(102.5deg) translate3d(400px, 0 , 0);
+       
+        }
+}
+#vanilla {
+    font-size: 80px;
+}
+#place {
+    opacity: 0;
+}
+#place:hover {
+    opacity: 1;
+    transition: ease-in-out 1s;
+}
+#flower {
+    color: mistyrose;
+    animation: blossom 2.5s infinite;
+    animation-fill-mode: both;
+    animation-timing-function: ease-in-out;
+}
+@keyframes blossom {
+    0%{color: mistyrose;}
+    25%{color: darksalmon;}
+    50%{color: indianred;}
+    75%{color: lightpink;}
+    100%{color: rosybrown;}
+}
+#line8 {
+    color: rosybrown;
+    animation: glow 1s ease-in-out infinite alternate;
+}
+@keyframes glow {
+    from {
+      text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #ffb452, 0 0 40px #ffb452, 0 0 50px #ffb452, 0 0 60px #ffb452, 0 0 70px #ffb452;
+    }
+    
+    to {
+      text-shadow: 0 0 20px #fff, 0 0 30px #fddd4d, 0 0 40px #fddd4d, 0 0 50px #fddd4d, 0 0 60px #fddd4d, 0 0 70px #fddd4d, 0 0 80px #fddd4d;
+    }
+  }
